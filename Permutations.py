@@ -14,7 +14,10 @@ class Permutations:
 
     def permutate(self, int_list) -> List[List[int]]:
         """Perform the permutations"""
-
+         if len(int_list) == 1:
+            self.temp = [int_list]
+            return self.temp
+        if len(int_list) == 0:
         if len(self.temp) == 0:
             for k, v in enumerate(self.nums):
                 t = [[v, j] for j in self.nums if j != v]
