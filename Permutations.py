@@ -18,6 +18,7 @@ class Permutations:
             self.temp = [int_list]
             return self.temp
         if len(int_list) == 0:
+            return self.temp
         if len(self.temp) == 0:
             for k, v in enumerate(self.nums):
                 t = [[v, j] for j in self.nums if j != v]
